@@ -2,12 +2,12 @@
 using namespace std;
 
 int main(){
-    double sum=0,k=0;   //ÕâÀï¸ÄÓÃÁËoubleÀàĞÍ±äÁ¿²ÅÄÜÈ«²¿AC
+    double sum=0,k=0;   //è¿™é‡Œæ”¹ç”¨äº†doubleç±»å‹å˜é‡æ‰èƒ½å…¨éƒ¨AC,è€ƒè¯•é»˜è®¤å…¨éƒ¨ç”¨doubleæœ€å¥½
     cin>>k;
     for(double i=1;;i++){
         sum+=1/i;
         if(sum>k){
-            int n=static_cast<int>(i);  //½«Ë«¸¡µãÊı×ª»»³ÉÕûĞÍ
+            int n=static_cast<int>(i);  //å°†åŒæµ®ç‚¹æ•°è½¬æ¢æˆæ•´å‹
             cout<<n;
             break;
         }
