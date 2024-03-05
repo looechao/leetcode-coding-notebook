@@ -1,0 +1,28 @@
+# 忽略所有.o和.exe文件
+*.o
+*.exe
+
+# 忽略所有.dll文件，这些通常在Windows编译中产生
+*.dll
+
+# 忽略所有.dSYM目录，这些通常在Mac编译中产生
+*.dSYM/
+
+# 有些C++项目可能有一个build目录
+/build/
+
+# 如果你使用了Visual Studio，你也可能需要忽略以下文件和目录
+*.suo
+*.user 
+*.sln.docstates
+*.sdf
+*.sln
+*.suo
+*.opensdf
+*.vcxproj
+*.vcxproj.filters 
+*.vcxproj.user
+
+#忽略所有的临时文件
+*~
+*.swp

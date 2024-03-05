@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    double sum=0,k=0;   //这里改用了ouble类型变量才能全部AC
+    double sum=0,k=0;   //这里改用了double类型变量才能全部AC
     cin>>k;
     for(double i=1;;i++){
         sum+=1/i;
