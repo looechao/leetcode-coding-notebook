@@ -10,7 +10,7 @@ int main()
     int count =0; //peter抽的烟的数目
     int gain=0;  //换的烟
     cin>>n>>k;
-    while(n>k)  //抽k根换一根，始终用剩余的烟与k做比较
+    while(n>=k)  //抽k根换一根，始终用剩余的烟与k做比较
     {
         count+=k;
         n=n-k+1;
