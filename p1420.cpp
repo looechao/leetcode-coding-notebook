@@ -27,8 +27,8 @@ int main()
         }
         else
         {
-            if(count>=max) max=count;
-            count=1;
+            if(count>=max) max=count;   //连号断了，初始化
+            count=1;  //重置count的数值
             p++;
         }
     }

@@ -23,13 +23,13 @@ int main()
             num[i]=flag;
         p=p+input;
         flag=!flag;
-        if(p==n*n) break;
+        if(p==n*n) break;   //判定什么时候输入停止
     }
-    for(int i=0;i<n*n;i++)
+    for(int i=0;i<n*n;i++)   //输出矩阵
     {
         cout<<num[i];
         count++;
-        if(count!=n*n&&count%n==0)
+        if(count!=n*n&&count%n==0)   //每n个元素换一次行
         {
             cout<<endl;
         }
