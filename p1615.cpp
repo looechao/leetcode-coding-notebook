@@ -71,7 +71,7 @@ int main()
         }
         q++;
     }
-    long double seconds=(num2[0]-num1[0])*3600+(num2[1]-num1[1])*60+num2[2]-num1[2];
+    long long seconds=(num2[0]-num1[0])*3600+(num2[1]-num1[1])*60+num2[2]-num1[2];
     cout<<seconds*n;
     return 0;
 }
