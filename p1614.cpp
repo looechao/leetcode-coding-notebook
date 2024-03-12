@@ -20,7 +20,7 @@ int main()
     {
         cin>>num[i];
     }
-    while(p<=n-m)
+    while(p<=n-m)    //类似滑动窗口的计算
     {
         for(int i=p;i<p+m;i++)
         {
