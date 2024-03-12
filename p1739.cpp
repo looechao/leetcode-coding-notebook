@@ -7,23 +7,20 @@
 #include<cmath>
 using namespace std;
 char a;
-int res;
 int i;
+int balance;
 
 int main()
 {
-    int balance = 0; //À¨ºÅ×´Ì¬
-    for(;;i++)
+    string str="0";
+    cin>>str;
+    for(int i=0;i<str.size();i++)
     {
-        cin>>a;
-        if(i==0&&a==')') {cout<<"NO"; return 0;}
-        if(a=='(') balance++;
-        if(a==')') balance--;
-        if(balance==0) res=1;
-        else    res=0;
-        if(a=='@') break;
+        if(i==0&&str.at(i)==')') {cout<<"NO";return 0;}
+        if(str.at(i)=='(') balance++;
+        if(str.at(i)==')') balance--;
+        if(balance==-1) break;
     }
-    if(res==1) cout<<"YES";
+    if(balance==0) cout<<"YES";
     else cout<<"NO";
-    return 0;
 }
