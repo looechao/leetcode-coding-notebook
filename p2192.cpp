@@ -11,17 +11,27 @@ using namespace std;
 int main()
 {
     int n=0;
+    int num0=0,num5=0;
     cin>>n;
-    vector<char> c(n,'0');
     for(int i=0;i<n;i++)
     {
-        char a;
+        int a;
         cin>>a;
-        c.at(i)=a;
+        if(a==5) num5++;
+        if(a==0) num0++;
     }
-    string str(c.begin(),c.end());
-    long long x=stoll(str);
-    if(x%90==0) cout<<x;
-    else cout<<"-1";
+    if(num0==0) cout<<-1;
+    else
+    {
+        if(num5>=9)
+        {
+            for(int i=1;i<=num5/9*9;i++)
+                cout<<5;
+            for(int i=1;i<=num0;i++)
+                cout<<0;
+        }
+        else
+            cout<<0;
+    }
     return 0;
 }
