@@ -215,7 +215,38 @@ public:
 
 
 
-# P★
-题目描述：
+# P0080★
+题目描述：remove-duplicates-from-sorted-array-ii-给你一个有序数组 `nums` ，请你**[ 原地](http://baike.baidu.com/item/原地算法)** 删除重复出现的元素，使得出现次数超过两次的元素**只出现两次** ，返回删除后数组的新长度。
 #### 思路
+
+- 暴力求解
+- 第二根指针从后往前扫描
+
 #### 总结
+
+```c++
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        for(int i=0;i<nums.size();i++){
+            int count=1;
+            for(int j=nums.size()-1;j>i;j--){    //从后往前扫描
+                if(nums[j]==nums[i]){
+                    count++;
+                }
+            }
+            if(count>2){
+                for(int j=nums.size()-1;j>i;j--){
+                    if(nums[j]==nums[i]){
+                        count--;
+                        nums.erase(nums.begin()+j);
+                    }
+                    if(count==2)
+                        break;
+                }
+            }
+        }
+        return nums.size();
+    }
+};
+```
