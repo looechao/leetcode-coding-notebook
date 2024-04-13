@@ -250,3 +250,46 @@ public:
     }
 };
 ```
+# P0128★
+题目描述：最长连续序列，给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。
+#### 思路
+- 一开始尝试了双重循环的暴力解，但是时间复杂度很高，故放弃
+- 使用sort函数排序后再统计，方便很多
+#### 总结
+```c++
+#include<algorithm>
+#include<cmath>
+class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        if (nums.empty()) return 0;
+        sort(nums.begin(),nums.end());
+        int max_count = 1;
+        int current_count = 1;
+        for(int i = 1; i < nums.size(); i++){    //统计最大的连续个数
+            if(nums[i] != nums[i-1]){
+                if(nums[i] == nums[i-1] + 1){       
+                    current_count++;
+                } else {        //当遇到重复元素时,计数不能增加
+                    current_count = 1;
+                }
+                max_count = max(max_count, current_count);
+            }
+        }
+        return max_count;
+    }
+};
+```
+
+
+
+
+
+
+
+
+
+# P★
+题目描述：
+#### 思路
+#### 总结
