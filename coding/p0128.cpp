@@ -1,21 +1,22 @@
-#include<climits>
+#include<algorithm>
+#include<cmath>
 class Solution {
 public:
-    int max=0;
     int longestConsecutive(vector<int>& nums) {
-        for(int i=0;i<nums.size();i++){
-            int count=1;
-            int start=nums[i]+1;
-            for(int j=0;j<nums.size();j++){    //统计本次起始元素的最大连续值
-                if(nums[j]==start){
-                    count++;
-                    start=nums[j]+1;
-                    j=-1;
+        if (nums.empty()) return 0;
+        sort(nums.begin(),nums.end());
+        int max_count = 1;
+        int current_count = 1;
+        for(int i = 1; i < nums.size(); i++){
+            if(nums[i] != nums[i-1]){
+                if(nums[i] == nums[i-1] + 1){
+                    current_count++;
+                } else {
+                    current_count = 1;
                 }
+                max_count = max(max_count, current_count);
             }
-            if(count>=max)
-                max=count;
         }
-        return max;
+        return max_count;
     }
 };
