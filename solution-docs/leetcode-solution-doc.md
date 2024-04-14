@@ -286,10 +286,86 @@ public:
 给定两个整数数组 gas 和 cost ，如果你可以按顺序绕环路行驶一周，则返回出发时加油站的编号，否则返回 -1 。如果存在解，则 保证 它是 唯一 的。
 #### 思路1
 - 暴力求解复杂度过高
-
+```c++
+class Solution {
+public:
+    int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
+        int left=0,spot=0;
+        for(int i=0;i<gas.size();i++){     //从不同的起点出发
+            int j=i;
+            left=0;
+            while(1){
+                left+=gas[j];    //加油
+                if(left<cost[j]) // 当前的汽油不足以抵达下一加油站
+                    break;
+                left-=cost[j];   //耗油
+                j=(j+1)%gas.size();   //前进到下一个加油站，如果到达末尾则回到开始
+                if(j==i){ // 如果我们成功绕环一圈，返回开始的索引
+                    return i;
+                    break;
+                }
+            }
+        }
+        return -1;
+    }
+};
+```
 #### 思路2
 - 用如果当前的总油量大于总花销，呢么一定可以环行一周
+```c++
+class Solution {
+public:
+    int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
+        int total_gas = 0, total_cost = 0, tank = 0, start = 0;
 
+        for (int i = 0; i < gas.size(); i++) {
+            total_gas += gas[i];   // 所有站点的油量
+            total_cost += cost[i]; // 所有站点的耗油量
+            tank += gas[i] - cost[i]; // tank 存储的是剩余的油量
+
+            if (tank < 0) { // 如果油量不够
+                start = i + 1; // 选择下一个站点作为新的出发点
+                tank = 0;      // 油箱置空
+            }
+        }
+
+        // 如果总油量 >= 总消耗，那么一定可以找到一个起始点走完整个路程
+        if (total_gas >= total_cost) return start;
+        else return -1;
+    }
+};
+```
+# P0136★（有精简版待研究）
+题目描述：single-number,给你一个 非空 整数数组 nums ，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+#### 思路
+不能够使用双重循环，否则时间复杂度会高
+- 找到数组内最大的元素n，创建vec(n,0);
+- 打表
+#### 总结
+用空间换时间，要注意有负数的时候还要额外新建一个vec，感觉代码有点啰嗦
+```c++
+
+
+```
+- 类似的精简版解法：
+```c++
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int i = 0;
+        for (auto& num : nums) {
+            i ^= num;
+        }
+        return i;
+    }
+};
+```
+# P0002★
+题目描述：add 2 numbers: 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
+请你将两个数相加，并以相同形式返回一个表示和的链表。
+你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
+#### 思路
+#### 总结
 
 
 
