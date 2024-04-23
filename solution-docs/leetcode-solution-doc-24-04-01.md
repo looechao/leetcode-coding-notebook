@@ -21,7 +21,7 @@ public:
 };
 ```
 # P0015★
-题目描述：在整数中找出vector<int> vec(3), 使得vec中的元素满足 i != j、i != k 且 j != k ，同时还满足 nums[i] + nums[j] + nums[k] == 0
+题目描述3-sum：在整数中找出vector<int> vec(3), 使得vec中的元素满足 i != j、i != k 且 j != k ，同时还满足 nums[i] + nums[j] + nums[k] == 0
 #### 思路
 参考了题解，关键是要避免重复的三元组，下标出现的顺序不重要
 #### 总结
@@ -344,7 +344,49 @@ public:
 #### 总结
 用空间换时间，要注意有负数的时候还要额外新建一个vec，感觉代码有点啰嗦
 ```c++
-
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        if(nums[0]>=0){         //只有正数的情况
+            vector<int> posvec(abs(nums[nums.size()-1])+1,0);
+            for(int i=0;i<nums.size();i++){
+                posvec[nums[i]]++;
+            }
+            for(int i=0;i<posvec.size();i++){
+                if(posvec[i]==1){
+                    return i;
+                    break;
+                 }
+            }
+        }
+        else{       //有负数的情况
+            vector<int> posvec(abs(nums[nums.size()-1])+1,0);
+            vector<int> negvec(abs(nums[0])+1,0);
+            for(int i=0;i<nums.size();i++){
+                if(nums[i]>=0){
+                    posvec[nums[i]]++;
+                }
+                else{
+                    negvec[abs(nums[i])]++;
+                }
+            }
+            for(int i=0;i<posvec.size();i++){
+                if(posvec[i]==1){
+                    return i;
+                    break;
+                 }
+            }
+            for(int i=0;i<negvec.size();i++){
+                if(negvec[i]==1){
+                    return -i;
+                    break;
+                 }
+            }
+        }
+        return 0;
+    }
+};
 
 ```
 - 类似的精简版解法：
@@ -360,21 +402,3 @@ public:
     }
 };
 ```
-# P0002★
-题目描述：add 2 numbers: 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
-请你将两个数相加，并以相同形式返回一个表示和的链表。
-你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
-#### 思路
-#### 总结
-
-
-
-
-
-
-
-
-# P★
-题目描述：
-#### 思路
-#### 总结

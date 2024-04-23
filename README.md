@@ -1,13 +1,15 @@
 #### LeetCode
 | #    | Title                                  | Solution | Difficulty |
 | ---- | -------------------------------------- | -------- | ---------- |
-| 0001 | two-sum                                | C++      | ★          |
-| 0015 | 3sum                                   | C++      | ★          |
-| 0016 | 3sum-closet                            | C++      | ★          |
-| 0026 | remove-duplicates-from-sorted-array    | C++      | ★          |
-| 0027 | remove-element                         | C++      | ★          |
-| 0066 | plus-one                               | C++      | ★          |
-| 0080 | remove-duplicates-from-sorted-array-ii | C++      | ★          |
-| 0128 | longest-consecutive-sequence           | C++      | ★          |
-| 0134 | gas-station                            | C++      | ★          |
-| 0136 | single-number                          | C++      | ★          |
+| 0001 | two-sum                                | C++      | EASY       |
+| 0015 | 3sum                                   | C++      | MEDIUM     |
+| 0016 | 3sum-closest                           | C++      | MEDIUM     |
+| 0026 | remove-duplicates-from-sorted-array    | C++      | EASY       |
+| 0027 | remove-element                         | C++      | EASY       |
+| 0066 | plus-one                               | C++      | EASY       |
+| 0080 | remove-duplicates-from-sorted-array-ii | C++      | MEDIUM     |
+| 0128 | longest-consecutive-sequence           | C++      | MEDIUM     |
+| 0134 | gas-station                            | C++      | MEDIUM     |
+| 0136 | single-number                          | C++      | EASY       |
+| 0009 | palindrome-number                      | C++      | EASY       |
+| 0013 | roman-to-integer                       |          | EASY       |
