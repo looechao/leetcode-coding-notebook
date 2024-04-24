@@ -12,4 +12,6 @@
 | 0134 | gas-station                            | C++      | MEDIUM     |
 | 0136 | single-number                          | C++      | EASY       |
 | 0009 | palindrome-number                      | C++      | EASY       |
-| 0013 | roman-to-integer                       |          | EASY       |
+| 0013 | roman-to-integer                       | C++      | EASY★      |
+| 0014 | longest-common-prefix                  | C++      | EASY       |
+| 0020 | valid-parentheses                      | C++      | EASY       |
