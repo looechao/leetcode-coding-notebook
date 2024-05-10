@@ -75,17 +75,100 @@ public:
     }
 };
 ```
-# P0020★
+# P0021★
 
-题目描述：valid-parentheses, 判断string中的括号是否匹配
+题目描述：merge-two-sorted-lists, 合并两个有序链表，按照升序
 
 #### 思路
-考虑使用栈,从串的起点开始扫描
-- 当扫描到左括号时,入栈 stk.push
-- 当扫描到右括号时
-  - 若栈为空, return false;
-  - 若栈非空, 与栈顶元素比较, 查看是否匹配
+使用哑节点，防止直接对空指针进行解引用
+
 #### 总结
+
+```c
+struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
+    struct ListNode dummy;  //定义哑节点
+    struct ListNode* tail = &dummy;  //用于记录链表内元素所在的位置
+   	dummy.next = NULL;
+    while(list1 && list2){
+        if(list1->val <= list2->val){
+            tail->next = list1;
+            list1 = list1->next;
+            tail = tail->next;
+        }else{
+            tail->next = list2;
+            list2 = list2->next;
+            tail = tail->next;
+        }
+    }
+    //只剩下一个链表的时候，直接链接
+    if(list1){
+            tail->next = list1;
+    }
+    if(list2){
+            tail->next = list2;
+    }
+    return dummy.next;
+}
+```
+
+精华部分是使用dummy作为哑节点，用tail穿针引线一般的按顺序记录每个节点的地址
+
+# P002★
+
+题目描述：add-two-numbers, 给你两个 **非空** 的链表，表示两个非负的整数。它们每位数字都是按照 **逆序** 的方式存储的，并且每个节点只能存储 **一位** 数字。
+
+#### 思路
+
+模拟初等数学中加法运算的过程，用carry表示进位
+
+```bash
+342 + 564 = 807
+
+        [2]--->[4]--->[3]
+
+        [5]--->[6]--->[4]
+
+dummy-->[7]--->[0]--->[7+1]
+
+```
+
+#### 总结
+
+```c
+#include<math.h>
+struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
+    struct ListNode dummy;
+    struct ListNode* tail = &dummy;
+    dummy.next = NULL;
+    int carry = 0;
+    while(l1 || l2){
+        int n1 = l1? l1->val:0;
+        int n2 = l2? l2->val:0;
+        int sum = n1 + n2 + carry; 
+        struct ListNode* new_node = malloc(sizeof(struct ListNode));
+        new_node->val = sum%10;
+        new_node->next = NULL;
+        tail->next = new_node;
+        tail = tail->next;
+        carry = sum / 10;
+        if(l1){
+            l1 = l1->next;
+        }
+        if(l2){
+            l2 = l2->next;
+        }    
+    }
+    if(carry == 1){
+        struct ListNode* new_node = malloc(sizeof(struct ListNode));
+        new_node->val = 1;
+        new_node->next = NULL;
+        tail->next = new_node;
+    }
+    return dummy.next;
+}
+```
+
+
 
 
 
