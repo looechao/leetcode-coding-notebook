@@ -1,4 +1,5 @@
 #### LeetCode
+
 | #    | Title                                  | Solution | Difficulty |
 | ---- | -------------------------------------- | -------- | ---------- |
 | 0001 | two-sum                                | C++      | EASY       |
@@ -18,3 +19,4 @@
 | 0021 | merge-two-sorted-lists                 | C        | EASY       |
 | 0002 | add-two-numbers                        | C        | EASY       |
 | 0058 | length-of-last-word                    | C        | EASY       |
+| 0083 | remove-duplicates-from-sorted-lis      | C        | EASY       |

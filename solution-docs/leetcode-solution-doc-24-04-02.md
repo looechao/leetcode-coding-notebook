@@ -1,10 +1,16 @@
 # P0013★
+
 题目描述：roman-to-integer，罗马数转阿拉伯数字
+
 #### 思路
+
 - 使用宏定义define七种罗马字符
 - 使用条件判断进行逐个扫描求和
+
 #### 总结
+
 - 注意类似I在V左边这种需要减的情况
+
 ```c++
 #define I 1
 #define V 5
@@ -39,14 +45,21 @@ public:
     }
 };
 ```
+
 # P0014★
+
 题目描述：longest-common-prefix, 查找字符串中的最长公共前缀
+
 #### 思路
+
 - 纵向比较字符串组中每串字符串的字符，push_back到lcp里
 - 如果出现不同的情况就结束循环
 - 返回lcp
+
 #### 总结
+
 逻辑较简单,注意循环外最后的返回值也应该是lcp
+
 ```c++
 #include<cstring>
 class Solution {
@@ -75,11 +88,13 @@ public:
     }
 };
 ```
+
 # P0021★
 
 题目描述：merge-two-sorted-lists, 合并两个有序链表，按照升序
 
 #### 思路
+
 使用哑节点，防止直接对空指针进行解引用
 
 #### 总结
@@ -156,7 +171,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
         }
         if(l2){
             l2 = l2->next;
-        }    
+        }  
     }
     if(carry == 1){
         struct ListNode* new_node = malloc(sizeof(struct ListNode));
@@ -168,16 +183,44 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
 }
 ```
 
+# P0083★
 
+题目描述：remove-duplicates-from-sorted-list, 给定的链表是已经排好序的链表，删除所有的错误元素
 
+#### 思路
 
+- 由于是已经排好序的链表，只需要比较连续的元素即可
+- 比较当前节点的值和下一个节点的值
+- 注意指针移动的顺序，小心漏掉重复的元素
 
+#### 总结
 
+```c
+struct ListNode* deleteDuplicates(struct ListNode* head) {
+    //处理空链表
+    if(!head){
+        return head;
+    }
+    
+    while(head->next){
+        if(head->val == head->next->val){
+            head->next = head->next->next;
+        }else{
+            head = head->next;
+        }
+    }
+    
+    return head;
+}
+```
 
 
 
 
 # P00★
+
 题目描述：
+
 #### 思路
+
 #### 总结

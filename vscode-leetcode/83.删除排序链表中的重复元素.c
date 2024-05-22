@@ -13,29 +13,21 @@
  * };
  */
 struct ListNode* deleteDuplicates(struct ListNode* head) {
-    struct ListNode* start = head;
-    bool pos_arr[101];
-    bool neg_arr[101];
-    for(int i =0; i < 101; i++){
-        pos_arr[i] = false;
-        neg_arr[i] = false;
-    }
     if(!head){
-        return start;
-    }
-    if(head->val >= 0){
-        pos_arr[head->val] = true;
-    }else{
-        neg_arr[abs(head->val)] =true;
+        return head;
     }
 
-    while(head->next){
-        //移动扫描
-        if(head->next->val > 0){
-            if (pos_arr[])
+    struct ListNode* curr = head;
+
+    while(curr->next){
+        if(curr->val == curr->next->val){
+            curr->next = curr->next->next;
+        }else{
+            curr = curr->next;
         }
     }
-    return start;
+
+    return head;
 }
 // @lc code=end
 
