@@ -26,4 +26,5 @@
 
 |      | Title                                                        | Solution | Difficulty |
 | ---- | ------------------------------------------------------------ | -------- | ---------- |
-| 101  | [Symmetric Tree](https://leetcode.cn/problems/symmetric-tree/) | C++      | EASY       |
+| 0101 | [Symmetric Tree](https://leetcode.cn/problems/symmetric-tree/) | C++      | EASY       |
+| 0102 | [Binary Tree Level Order Traversal](https://leetcode.cn/problems/binary-tree-level-order-traversal/) | C++      | MEDIUM     |
