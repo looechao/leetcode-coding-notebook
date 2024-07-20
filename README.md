@@ -1,6 +1,6 @@
 #### LeetCode
 
-| #    | Title                                  | Solution | Difficulty |
+|     | Title                                  | Solution | Difficulty |
 | ---- | -------------------------------------- | -------- | ---------- |
 | 0001 | two-sum                                | C++      | EASY       |
 | 0015 | 3sum                                   | C++      | MEDIUM     |
@@ -20,3 +20,10 @@
 | 0002 | add-two-numbers                        | C        | EASY       |
 | 0058 | length-of-last-word                    | C        | EASY       |
 | 0083 | remove-duplicates-from-sorted-lis      | C        | EASY       |
+| 0088 | merge-sorted-array                     | C++      | EASY       |
+
+#### BFS
+
+|      | Title                                                        | Solution | Difficulty |
+| ---- | ------------------------------------------------------------ | -------- | ---------- |
+| 101  | [Symmetric Tree](https://leetcode.cn/problems/symmetric-tree/) | C++      | EASY       |

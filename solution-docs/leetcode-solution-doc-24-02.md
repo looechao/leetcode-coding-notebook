@@ -201,7 +201,7 @@ struct ListNode* deleteDuplicates(struct ListNode* head) {
     if(!head){
         return head;
     }
-    
+  
     while(head->next){
         if(head->val == head->next->val){
             head->next = head->next->next;
@@ -209,18 +209,38 @@ struct ListNode* deleteDuplicates(struct ListNode* head) {
             head = head->next;
         }
     }
-    
+  
     return head;
 }
 ```
 
 
 
+# P0088★
 
-# P00★
-
-题目描述：
+题目描述：合并两个vector数组
 
 #### 思路
 
+- 考虑vector的动态扩容，直接将nums2的元素追加到nums1的后面
+- 对追加完新元素的nums1数组进行排序
+
 #### 总结
+
+```cc
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        for(int i = 0; i != n; ++i){
+            nums1[m+i] = nums2[i];
+        }
+        sort(nums1.begin(), nums1.end());
+        for(auto &ele : nums1){
+            cout << ele << " ";
+        }
+        cout << endl;
+    }
+};
+```
+
+
