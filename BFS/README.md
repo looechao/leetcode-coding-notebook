@@ -125,13 +125,64 @@ public:
 };
 ```
 
+#### P0103★
 
+题目描述：[Binary Tree Zigzag Level Order Traversal](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/), 锯齿层序遍历
 
+##### 思路
 
+```bash
+      [3]
+      /  \
+     /     \ 
+   [9]     [20]
+           /  \
+        [15]  [7]
+```
 
+一开始尝试使用普通队列，但是行不通
 
+正确的做法是使用双端队列和一个bool标记进行遍历
 
+##### 总结
 
+```cpp
+class Solution {
+public:
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        vector<vector<int>> ret;
+        dqueue<TreeNode*> q;
+        q.push_back(root);
+        //forward的默认值应该是false
+        bool forward = false;
+        while(!q.empty()){
+            //构建每一层的vec和dequeue
+            vector<int> vec;
+            deque<TreeNode*> nq;
+            while(!q.empty()){
+                TreeNode* u = q.front();
+                q.pop_front();
+                if( u != nullptr && forward == true){
+                    vec.push_back(u->val);
+                    nq.push_front(u->left);
+                    nq.push_front(u->right);
+                }
+                if( u != nullptr && forward == false){
+                    vec.push_back(u->val);
+                    nq.push_back(u->left);
+                    nq.push_back(u->right);
+                }
+            }
+            forward = !forward;
+            if(!vec.empty()){
+                ret.push_back(vec);
+                vec.clear();
+            }
+            q = nq;
+        }
+        return ret;
+};
+```
 
 
 
