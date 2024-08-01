@@ -1,6 +1,6 @@
 #### [INTRO](./vscode-leetcode)
 
-|     | Title                                  | Solution | Difficulty |
+|      | Title | Solution | Difficulty |
 | ---- | -------------------------------------- | -------- | ---------- |
 | 0001 | two-sum                                | C++      | EASY       |
 | 0015 | 3sum                                   | C++      | MEDIUM     |
@@ -24,9 +24,15 @@
 
 #### [BFS](./BFS)
 
+|      | Title                                                                                                           | Solution | Difficulty |
+| ---- | --------------------------------------------------------------------------------------------------------------- | -------- | ---------- |
+| 0101 | [Symmetric Tree](https://leetcode.cn/problems/symmetric-tree/)                                                     | C++      | EASY       |
+| 0102 | [Binary Tree Level Order Traversal](https://leetcode.cn/problems/binary-tree-level-order-traversal/)               | C++      | MEDIUM     |
+| 0103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/) | C++      | MEDIUM     |
+| 0127 | [Word Ladder](https://leetcode.cn/problems/word-ladder/)                                                           | C++      | MEDIUM     |
+
+#### [BFS](./Dynamic-Programming)
+
 |      | Title                                                        | Solution | Difficulty |
 | ---- | ------------------------------------------------------------ | -------- | ---------- |
-| 0101 | [Symmetric Tree](https://leetcode.cn/problems/symmetric-tree/) | C++      | EASY       |
-| 0102 | [Binary Tree Level Order Traversal](https://leetcode.cn/problems/binary-tree-level-order-traversal/) | C++      | MEDIUM     |
-| 0103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/) | C++      | MEDIUM     |
-| 0127 | [Word Ladder](https://leetcode.cn/problems/word-ladder/)     | C++      | MEDIUM     |
+| 0053 | [Maximum Subarray](https://leetcode.cn/problems/maximum-subarray/) | C++      | MEDIUM     |
