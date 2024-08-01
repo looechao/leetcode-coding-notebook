@@ -31,7 +31,7 @@
 | 0103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/) | C++      | MEDIUM     |
 | 0127 | [Word Ladder](https://leetcode.cn/problems/word-ladder/)                                                           | C++      | MEDIUM     |
 
-#### [BFS](./Dynamic-Programming)
+#### [DP](./Dynamic-Programming)
 
 |      | Title                                                        | Solution | Difficulty |
 | ---- | ------------------------------------------------------------ | -------- | ---------- |
