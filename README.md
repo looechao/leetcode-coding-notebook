@@ -24,7 +24,7 @@
 | ---- | ------------------------------------------------------------ | -------- | ---------- |
 | 0053 | [Maximum Subarray](https://leetcode.cn/problems/maximum-subarray/) | C++      | MEDIUM     |
 
-
+### 入门
 
 #### [INTRO](./vscode-leetcode)
 
@@ -50,4 +50,3 @@
 | 0083 | remove-duplicates-from-sorted-lis      | C        | EASY       |
 | 0088 | merge-sorted-array                     | C++      | EASY       |
 
-#### 
