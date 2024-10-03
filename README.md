@@ -1,13 +1,21 @@
 ### 数据结构
 
-#### [LinkedList](./1-2-LinkedList)
+##### [Array](./1-1-Array)
+
+|      | Title                                          | Solution | TAGS  | Difficulty |
+| ---- | ---------------------------------------------- | -------- | ----- | ---------- |
+| 0066 | [加一](https://leetcode.cn/problems/plus-one/) | C++      | Array | EASY       |
+
+##### [LinkedList](./1-2-LinkedList)
 
 |      | Title                                                        | Solution | TAGS       | Difficulty |
 | ---- | ------------------------------------------------------------ | -------- | ---------- | ---------- |
+| 0082 | [删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/) | C++      | LinkedList | MEDIUM     |
+| 0083 | [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/) | C++      | LinkedList | EASY       |
 | 0092 | [反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/) | C++      | LinkedList | MEDIUM     |
 | 0206 | [反转链表](https://leetcode.cn/problems/reverse-linked-list/) | C++      | LinkedList | EASY       |
 
-#### [Graph](./1-8-Graph)
+##### [Graph](./1-8-Graph)
 
 |      | Title                                                        | Solution | TAGS | Difficulty |
 | ---- | ------------------------------------------------------------ | -------- | ---- | ---------- |
@@ -18,7 +26,7 @@
 
 ### 算法
 
-#### [动态规划](./2-6-动态规划)
+##### [动态规划](./2-6-动态规划)
 
 |      | Title                                                        | Solution | Difficulty |
 | ---- | ------------------------------------------------------------ | -------- | ---------- |
@@ -26,7 +34,7 @@
 
 ### 入门
 
-#### [INTRO](./vscode-leetcode)
+##### [INTRO](./0-Intro-leetcode)
 
 |      | Title                                  | Solution | Difficulty |
 | ---- | -------------------------------------- | -------- | ---------- |
