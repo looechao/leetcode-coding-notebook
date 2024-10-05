@@ -2,9 +2,10 @@
 
 ##### [Array](./1-1-Array)
 
-|      | Title                                          | Solution | TAGS  | Difficulty |
-| ---- | ---------------------------------------------- | -------- | ----- | ---------- |
-| 0066 | [加一](https://leetcode.cn/problems/plus-one/) | C++      | Array | EASY       |
+|      | Title                                                        | Solution | TAGS  | Difficulty |
+| ---- | ------------------------------------------------------------ | -------- | ----- | ---------- |
+| 0066 | [加一](https://leetcode.cn/problems/plus-one/)               | C++      | Array | EASY       |
+| 0724 | [寻找数组的中心下标](https://leetcode.cn/problems/find-pivot-index/) | C++      | Array | EASY       |
 
 ##### [LinkedList](./1-2-LinkedList)
 
@@ -14,6 +15,14 @@
 | 0083 | [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/) | C++      | LinkedList | EASY       |
 | 0092 | [反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/) | C++      | LinkedList | MEDIUM     |
 | 0206 | [反转链表](https://leetcode.cn/problems/reverse-linked-list/) | C++      | LinkedList | EASY       |
+
+[Stack](./1-3-Stack)
+
+|      | Title                                                        | Solution | TAGS  | Difficulty |
+| ---- | ------------------------------------------------------------ | -------- | ----- | ---------- |
+| 1047 | [删除字符串中的所有相邻重复项](https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/) | C++      | Stack | EASY       |
+| 0020 | [有效的括号](https://leetcode.cn/problems/valid-parentheses/) | C++      | Stack | EASY       |
+| 0123 | [LCR 123. 图书整理 I](https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) | C++      | Stack | EASY       |
 
 ##### [Graph](./1-8-Graph)
 
