@@ -15,6 +15,7 @@
 | 0083 | [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/) | C++      | LinkedList | EASY       |
 | 0092 | [反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/) | C++      | LinkedList | MEDIUM     |
 | 0206 | [反转链表](https://leetcode.cn/problems/reverse-linked-list/) | C++      | LinkedList | EASY       |
+| 0021 | [合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/) | C++      | LinkedList | EASY       |
 
 [Stack](./1-3-Stack)
 

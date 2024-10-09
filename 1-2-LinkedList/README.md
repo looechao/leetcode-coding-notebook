@@ -6,8 +6,7 @@
 | 0083 | [删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/) | C++      | LinkedList | EASY       |
 | 0092 | [反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/) | C++      | LinkedList | MEDIUM     |
 | 0206 | [反转链表](https://leetcode.cn/problems/reverse-linked-list/) | C++      | LinkedList | EASY       |
-
-
+| 0021 | [合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/) | C++      | LinkedList | EASY       |
 
 # P0082 MEDIUM
 
@@ -208,7 +207,65 @@ public:
 };
 ```
 
+# P0021 EASY
 
+#### 题目描述
+
+将两个升序链表合并为一个新的 **升序** 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
+
+![img](https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg)
+
+#### 思路
+
+由于两个链表都是有序的，直接使用双指针策略，不断让两链表的头部节点中最小的一个尾插进入新的链表中即可
+
+#### 总结
+
+```c++
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        ListNode* dummy = new ListNode();
+        ListNode* res = dummy;
+        ListNode* cur1 = list1;
+        ListNode* cur2 = list2;
+        if(!cur1 && !cur2){
+            return nullptr;
+        }
+        if(!cur1 && cur2){
+            return cur2;
+        }
+        if(!cur2 && cur1){
+            return cur1;
+        }
+        while(cur1 && cur2){
+            if(cur1->val <= cur2->val){
+                ListNode* tmp = new ListNode();
+                tmp->val = cur1->val;
+                res->next = tmp;
+                res = res->next;
+                cur1 = cur1->next;
+            }else{
+                ListNode* tmp = new ListNode();
+                tmp->val = cur2->val;
+                res->next = tmp;
+                res = res->next;
+                cur2 = cur2->next;
+            }
+        }
+        if(!cur1 && cur2){
+            res->next = cur2;
+            return dummy->next;
+        }
+        if(!cur2 && cur1){
+            res->next = cur1;
+            return dummy->next;
+        }
+
+        return dummy->next;
+    }
+};
+```
 
 
 
